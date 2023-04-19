@@ -4,7 +4,7 @@ use std::fmt;
 use std::result::Result;
 use tokio;
 use std::io;
-
+//Add API key below
 const API_KEY: &str = "API_Key_Here";
 
 #[derive(Debug)]
@@ -61,7 +61,7 @@ impl GptClient {
         headers.insert("Content-Type", "application/json".parse().unwrap());
         headers
     }
-
+//You can change these parameters for different temp, different model, ect.
     fn build_body(&self, prompt: &str) -> Value {
         json!({
             "model": "text-davinci-003",
